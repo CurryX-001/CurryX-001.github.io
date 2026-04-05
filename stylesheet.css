@@ -140,6 +140,41 @@ section { padding:72px 0; }
 }
 .section-header.visible h2::after { width:100%; }
 
+/* ===== PROJECTS ===== */
+.projects-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.proj-card {
+  padding:28px 24px; background: var(--bg-card);
+  border:1px solid var(--border-light); border-radius: var(--radius-lg);
+  transition: all var(--transition); display:flex; flex-direction:column;
+  position:relative; overflow:hidden;
+}
+.proj-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+  background: var(--accent); transform:scaleX(0); transform-origin:left;
+  transition: transform 0.4s var(--ease);
+}
+.proj-card:hover { border-color: var(--border); transform:translateY(-3px); box-shadow: var(--shadow-md); }
+.proj-card:hover::before { transform:scaleX(1); }
+.proj-card h3 { font-family: var(--font-display); font-size:18px; font-weight:500; margin-bottom:6px; line-height:1.3; }
+.proj-card h3 a { color: var(--text); }
+.proj-card h3 a:hover { color: var(--accent); }
+.proj-status {
+  display:inline-block; font-size:10px; font-weight:700; padding:3px 10px;
+  border-radius: var(--radius-full); margin-bottom:14px;
+  letter-spacing:0.06em; text-transform:uppercase; width:fit-content;
+}
+.proj-status.active { color:#1B7340; background:#DCFCE7; }
+.proj-status.coming { color: var(--text-tertiary); background: var(--bg-elevated); }
+.proj-desc { font-size:13.5px; color: var(--text-secondary); line-height:1.65; margin-bottom:18px; flex:1; }
+.proj-tags { display:flex; flex-wrap:wrap; gap:6px; }
+.proj-tags span {
+  font-size:11px; font-weight:500; color: var(--text-tertiary);
+  background: var(--bg-elevated); padding:4px 11px;
+  border-radius: var(--radius-full); letter-spacing:0.02em; transition: all var(--transition);
+}
+.proj-card:hover .proj-tags span { background: var(--accent-subtle); color: var(--accent); }
+@media (max-width:768px) { .projects-grid { grid-template-columns:1fr; } }
+
 /* ===== RESEARCH CATEGORY TABS ===== */
 .research-tabs {
   display:flex; gap:8px; margin-bottom:32px; flex-wrap:wrap;
