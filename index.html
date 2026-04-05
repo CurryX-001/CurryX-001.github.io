@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jiaqi Liao</title>
+  <meta name="author" content="Jiaqi Liao">
+  <meta name="description" content="Jiaqi Liao - Researcher in Video Generation & Agentic RL">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔬</text></svg>">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-name" href="#">Jiaqi Liao</a>
+      <div class="nav-links">
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="mailto:godubnation7@gmail.com">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-enter delay-1">Jiaqi Liao <span style="font-size:0.55em; font-weight:300; color:var(--text-secondary); letter-spacing:0.02em;">廖佳琪</span></h1>
+          <p class="hero-tagline hero-enter delay-2">Video Generation &amp; Agentic RL</p>
+          <p class="hero-bio hero-enter delay-3">
+            I am a research intern at <strong>Ant Group</strong> working on Video Generation and VLM RL post-training,
+            closely working with Shuailei Ma.
+            I received my B.Eng. degree from
+            <a href="https://www.bupt.edu.cn/">Beijing University of Posts and Telecommunications (BUPT)</a> in 2025.
+          </p>
+          <p class="hero-bio hero-enter delay-3" style="margin-top:-20px;">
+            I am deeply interested in <strong>Video Generation</strong> and <strong>Agentic RL</strong>.
+          </p>
+          <div class="hero-links hero-enter delay-4">
+            <a href="mailto:godubnation7@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Email
+            </a>
+            <a href="https://x.com/CurryX_001">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              X
+            </a>
+          </div>
+        </div>
+        <div class="hero-photo hero-enter delay-5">
+          <img src="data/photo.jpg" alt="Jiaqi Liao">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research" style="border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2>Research</h2>
+      </div>
+
+      <!-- Tabs -->
+      <div class="research-tabs fade-up">
+        <button class="research-tab active" data-tab="t2v">Text-to-Video</button>
+        <button class="research-tab" data-tab="vlm">Vision-Language</button>
+        <button class="research-tab" data-tab="imagegen">Image Generation</button>
+      </div>
+
+      <!-- T2V -->
+      <div class="research-category active" id="cat-t2v">
+        <div class="papers">
+          <!-- PhyGenBench -->
+          <article class="paper-card fade-up">
+            <div class="paper-icon">🎬</div>
+            <div class="paper-info">
+              <a class="paper-title" href="https://arxiv.org/abs/2410.05363">
+                Towards World Simulator: Crafting Physical Commonsense-Based Benchmark for Video Generation
+              </a>
+              <p class="paper-authors">
+                Fanqing Meng*, <span class="me">Jiaqi Liao*</span>,
+                <span class="authors-toggle" onclick="this.classList.toggle('expanded')">
+                  <span class="authors-ellipsis">…, </span>
+                  <span class="authors-hidden">Xinyu Tan, Wenqi Shao, Quanfeng Lu, Kaipeng Zhang, Yu Cheng, Dianqi Li, Yu Qiao, </span>
+                </span>
+                Ping Luo
+              </p>
+              <p class="paper-venue">ICML 2025</p>
+              <div class="paper-links">
+                <a href="https://phygenbench123.github.io/">Project</a>
+                <a href="https://arxiv.org/abs/2410.05363">arXiv</a>
+                <a href="https://github.com/OpenGVLab/PhyGenBench">Code</a>
+              </div>
+              <p class="paper-desc">
+                <strong>PhyGenBench</strong> proposes a comprehensive benchmark evaluating physical commonsense in video generation models, towards building world simulators.
+              </p>
+            </div>
+          </article>
+
+          <!-- VideoREPA -->
+          <article class="paper-card fade-up stagger-1">
+            <div class="paper-icon">🎥</div>
+            <div class="paper-info">
+              <a class="paper-title" href="https://videorepa.github.io/">
+                VideoREPA: Learning Physics for Video Generation through Relational Alignment with Foundation Models
+              </a>
+              <p class="paper-authors">
+                Xiangdong Zhang, <span class="me">Jiaqi Liao</span>,
+                <span class="authors-toggle" onclick="this.classList.toggle('expanded')">
+                  <span class="authors-ellipsis">…, </span>
+                  <span class="authors-hidden">Shaofeng Zhang, Fanqing Meng, Xiangpeng Wan, </span>
+                </span>
+                Junchi Yan
+              </p>
+              <p class="paper-venue">NeurIPS 2025</p>
+              <div class="paper-links">
+                <a href="https://videorepa.github.io/">Project</a>
+                <a href="https://arxiv.org/abs/2505.23656">arXiv</a>
+                <a href="https://github.com/aHapBean/VideoREPA">Code</a>
+              </div>
+              <p class="paper-desc">
+                <strong>VideoREPA</strong> learns physical knowledge for video generation via relational alignment with foundation models.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- VLM -->
+      <div class="research-category" id="cat-vlm">
+        <div class="papers">
+          <!-- GYM-V -->
+          <article class="paper-card fade-up">
+            <div class="paper-icon">🏋️</div>
+            <div class="paper-info">
+              <a class="paper-title" href="https://github.com/ModalMinds/gym-v">
+                Gym-V: A Unified Vision Environment System for Agentic Vision Research
+              </a>
+              <p class="paper-authors">
+                Fanqing Meng*,
+                <span class="authors-toggle" onclick="this.classList.toggle('expanded')">
+                  <span class="authors-ellipsis">…, </span>
+                  <span class="authors-hidden">Lingxiao Du, Jiawei Gu, </span>
+                </span>
+                <span class="me">Jiaqi Liao*</span> <span style="color:var(--accent);font-size:12px;">(Co-first &amp; Core Contributor)</span>,
+                <span class="authors-toggle" onclick="this.classList.toggle('expanded')">
+                  <span class="authors-ellipsis">…, </span>
+                  <span class="authors-hidden">Linjie Li, Jiawei Gu, Ziqi Zhao, Mengkang Hu, Yue Zhang, </span>
+                </span>
+                Zichen Liu, Michael Qizhe Shieh
+              </p>
+              <p class="paper-venue">Preprint</p>
+              <div class="paper-links">
+                <a href="https://arxiv.org/abs/2603.15432">arXiv</a>
+                <a href="https://github.com/ModalMinds/gym-v">Code</a>
+              </div>
+              <p class="paper-desc">
+                <strong>Gym-V</strong> provides a unified environment for agentic vision research, enabling systematic evaluation of vision-language models.
+              </p>
+            </div>
+          </article>
+
+          <!-- LangBridge -->
+          <article class="paper-card fade-up stagger-1">
+            <div class="paper-icon">🌉</div>
+            <div class="paper-info">
+              <a class="paper-title" href="https://curryx-001.github.io/LangBridge.github.io/">
+                LangBridge: Interpreting Image as a Combination of Language Embeddings
+              </a>
+              <p class="paper-authors">
+                <span class="me">Jiaqi Liao</span>, Yuwei Niu,
+                <span class="authors-toggle" onclick="this.classList.toggle('expanded')">
+                  <span class="authors-ellipsis">…, </span>
+                  <span class="authors-hidden">Fanqing Meng, Hao Li, Changyao Tian, Yinuo Du, Yuwen Xiong, Dianqi Li, Xizhou Zhu, Li Yuan, </span>
+                </span>
+                Jifeng Dai
+              </p>
+              <p class="paper-venue">ICCV 2025</p>
+              <div class="paper-links">
+                <a href="https://curryx-001.github.io/LangBridge.github.io/">Project</a>
+                <a href="https://arxiv.org/abs/2503.19404">arXiv</a>
+                <a href="https://github.com/CurryX-001/LangBridge">Code</a>
+              </div>
+              <p class="paper-desc">
+                <strong>LangBridge</strong> proposes interpreting images as combinations of language embeddings, bridging vision and language representations.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ImageGen -->
+      <div class="research-category" id="cat-imagegen">
+        <div class="papers">
+          <!-- WISE -->
+          <article class="paper-card fade-up">
+            <div class="paper-icon">🎨</div>
+            <div class="paper-info">
+              <a class="paper-title" href="https://github.com/PKU-YuanGroup/WISE">
+                WISE: A World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation
+              </a>
+              <p class="paper-authors">
+                Yuwei Niu,
+                <span class="authors-toggle" onclick="this.classList.toggle('expanded')">
+                  <span class="authors-ellipsis">…, </span>
+                  <span class="authors-hidden">Munan Ning, Mengren Zheng, Weiyang Jin, Bin Lin, Peng Jin, </span>
+                </span>
+                <span class="me">Jiaqi Liao</span>,
+                <span class="authors-toggle" onclick="this.classList.toggle('expanded')">
+                  <span class="authors-ellipsis">…, </span>
+                  <span class="authors-hidden">Chaoran Feng, Kunpeng Ning, Bin Zhu, </span>
+                </span>
+                Li Yuan
+              </p>
+              <p class="paper-venue">Preprint · ⭐ 100+ Stars</p>
+              <div class="paper-links">
+                <a href="https://arxiv.org/abs/2503.07265">arXiv</a>
+                <a href="https://github.com/PKU-YuanGroup/WISE">Code</a>
+              </div>
+              <p class="paper-desc">
+                <strong>WISE</strong> introduces a world knowledge-informed semantic evaluation framework for text-to-image generation.
+              </p>
+            </div>
+          </article>
+
+          <!-- SRUM -->
+          <article class="paper-card fade-up stagger-1">
+            <div class="paper-icon">🏆</div>
+            <div class="paper-info">
+              <a class="paper-title" href="https://waynejin0918.github.io/srum_web/">
+                SRUM: Fine-Grained Self-Rewarding for Unified Multimodal Models
+              </a>
+              <p class="paper-authors">
+                Weiyang Jin, Yuwei Niu, <span class="me">Jiaqi Liao</span>,
+                <span class="authors-toggle" onclick="this.classList.toggle('expanded')">
+                  <span class="authors-ellipsis">…, </span>
+                  <span class="authors-hidden">Chengqi Duan, Aoxue Li, Shenghua Gao, </span>
+                </span>
+                Xihui Liu
+              </p>
+              <p class="paper-venue">Preprint</p>
+              <div class="paper-links">
+                <a href="https://waynejin0918.github.io/srum_web/">Project</a>
+                <a href="https://arxiv.org/abs/2510.12784">arXiv</a>
+                <a href="https://github.com/WayneJin0918/SRUM">Code</a>
+              </div>
+              <p class="paper-desc">
+                <strong>SRUM</strong> proposes a fine-grained self-rewarding mechanism for training unified multimodal models.
+              </p>
+            </div>
+          </article>
+
+          <!-- UniSandbox -->
+          <article class="paper-card fade-up stagger-2">
+            <div class="paper-icon">📦</div>
+            <div class="paper-info">
+              <a class="paper-title" href="https://github.com/PKU-YuanGroup/UniSandBox">
+                Does Understanding Inform Generation in Unified Multimodal Models? From Analysis to Path Forward
+              </a>
+              <p class="paper-authors">
+                Yuwei Niu, Weiyang Jin, <span class="me">Jiaqi Liao</span>,
+                <span class="authors-toggle" onclick="this.classList.toggle('expanded')">
+                  <span class="authors-ellipsis">…, </span>
+                  <span class="authors-hidden">Chaoran Feng, Peng Jin, Bin Lin, Zongjian Li, Bin Zhu, Weihao Yu, </span>
+                </span>
+                Li Yuan
+              </p>
+              <p class="paper-venue">Preprint</p>
+              <div class="paper-links">
+                <a href="https://arxiv.org/abs/2511.20561">arXiv</a>
+                <a href="https://github.com/PKU-YuanGroup/UniSandBox">Code</a>
+              </div>
+              <p class="paper-desc">
+                <strong>UniSandbox</strong> investigates the relationship between understanding and generation capabilities in unified multimodal models.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" style="border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2>Experience</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item fade-up">
+          <div class="timeline-item-header">
+            <div class="timeline-info">
+              <h3>Ant Group · LingBot</h3>
+              <div class="timeline-role">Research Intern — VideoGen &amp; VLM RL</div>
+              <div class="timeline-period">Present</div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item fade-up stagger-1">
+          <div class="timeline-item-header">
+            <div class="timeline-info">
+              <h3>Beijing University of Posts and Telecommunications</h3>
+              <div class="timeline-role">B.Eng. in Artificial Intelligence / Computer Science · Rank 1/208</div>
+              <div class="timeline-period">Sep. 2021 — Jun. 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section style="border-top:1px solid var(--border); padding-bottom:40px;">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2>About</h2>
+      </div>
+      <div class="interests-content fade-up">
+        I am deeply passionate about <strong>Video Generation</strong> and <strong>Agentic RL</strong>.
+        Currently, I work closely with Shuailei Ma at Ant Group on T2V foundation models
+        and RL post-training pipelines for VideoGen.
+        I was awarded the <strong>SenseTime Scholarship</strong> (25 students nationwide) and
+        two consecutive <strong>National Scholarships</strong> (Top 0.2% nationwide).
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Jiaqi Liao. Designed with <a href="https://claude.ai/claude-code">Claude Code</a>.</p>
+      <p>Last updated Apr. 2026</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-up, .section-header').forEach(el => observer.observe(el));
+
+    document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 76, behavior: 'smooth' });
+        }
+      });
+    });
+
+    document.querySelectorAll('.research-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.research-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.research-category').forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('cat-' + tab.dataset.tab).classList.add('active');
+        document.querySelectorAll('#cat-' + tab.dataset.tab + ' .fade-up').forEach(el => {
+          el.classList.remove('visible');
+          observer.observe(el);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
