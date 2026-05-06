@@ -95,8 +95,9 @@ section { padding:72px 0; }
 }
 .hero-bio {
   font-size:15px; color: var(--text-secondary);
-  line-height:1.8; margin-bottom:36px;
+  line-height:1.8; margin-bottom:14px;
 }
+.hero-bio:last-of-type { margin-bottom:32px; }
 .hero-bio a { color: var(--accent); font-weight:500; }
 .hero-links { display:flex; flex-wrap:wrap; gap:10px; }
 .hero-links a {
@@ -141,7 +142,7 @@ section { padding:72px 0; }
 .section-header.visible h2::after { width:100%; }
 
 /* ===== PROJECTS ===== */
-.projects-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.projects-grid { display:grid; grid-template-columns:minmax(0, 1fr); gap:20px; }
 .proj-card {
   padding:28px 24px; background: var(--bg-card);
   border:1px solid var(--border-light); border-radius: var(--radius-lg);
@@ -287,6 +288,7 @@ a.paper-title:hover { color: var(--accent); }
 }
 .timeline-role { font-size:14px; color: var(--text-secondary); margin-top:2px; }
 .timeline-period { font-size:13px; color: var(--text-tertiary); font-weight:500; margin-top:1px; }
+.timeline-note { font-size:13px; color: var(--text-tertiary); line-height:1.55; margin-top:5px; }
 
 /* ===== INTERESTS ===== */
 .interests-content {
@@ -346,9 +348,10 @@ a.paper-title:hover { color: var(--accent); }
 }
 @media (max-width:480px) {
   .container { padding:0 18px; }
-  .nav-inner { padding:0 18px; height:52px; }
-  .nav-links { gap:14px; }
-  .nav-links a { font-size:12px; }
+  .nav-inner { padding:8px 18px; height:auto; min-height:52px; align-items:flex-start; }
+  .nav-name { font-size:18px; line-height:1.2; }
+  .nav-links { gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+  .nav-links a { font-size:11px; }
   .hero { padding:90px 0 24px; }
   .hero-links a { padding:7px 14px; font-size:12px; }
   .hero-photo { width:140px; height:140px; }
